@@ -209,6 +209,8 @@ await scheduler.tick; // 等待任务完成
 
 ## 实现思路
 
+> 📖 **想了解如何从零开始实现微任务调度器？** 查看详细的实现指南：[IMPLEMENTATION.zh-CN.md](./IMPLEMENTATION.zh-CN.md)
+
 ### 核心设计
 
 1. **任务队列**：使用 `Set` 数据结构自动去重相同的任务

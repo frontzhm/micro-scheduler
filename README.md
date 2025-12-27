@@ -29,6 +29,7 @@ yarn add micro-scheduler
 You can also use it directly via CDN:
 
 **unpkg:**
+
 ```html
 <!-- ESM -->
 <script type="module">
@@ -40,6 +41,7 @@ You can also use it directly via CDN:
 ```
 
 **jsDelivr:**
+
 ```html
 <!-- ESM -->
 <script type="module">
@@ -207,6 +209,8 @@ await scheduler.tick; // Wait for task to complete
 
 ## Implementation Details
 
+> 📖 **Want to learn how to build a microtask scheduler from scratch?** Check out the detailed implementation guide: [IMPLEMENTATION.md](./IMPLEMENTATION.md)
+
 ### Core Design
 
 1. **Task Queue**: Uses `Set` data structure to automatically deduplicate identical tasks
@@ -230,6 +234,7 @@ scheduler.enqueue(task); // Duplicate, won't execute twice
 #### 2. Microtask Queue
 
 Tasks are scheduled to execute in the microtask queue, ensuring they run:
+
 - After the current synchronous code
 - Before the next event loop tick
 - In the same order as they were enqueued
@@ -253,6 +258,7 @@ scheduler.enqueue(() => {
 #### 4. Lifecycle Hooks
 
 The scheduler provides hooks for before and after flush events, useful for:
+
 - Logging and debugging
 - Performance monitoring
 - State management
@@ -343,4 +349,3 @@ MIT
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-

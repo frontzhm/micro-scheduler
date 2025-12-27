@@ -17,6 +17,8 @@
     "dist",
     "README.md",
     "README.zh-CN.md",
+    "IMPLEMENTATION.md",
+    "IMPLEMENTATION.zh-CN.md",
     "LICENSE"
   ],
   "scripts": {
